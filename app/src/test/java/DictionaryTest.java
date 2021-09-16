@@ -26,6 +26,6 @@ public class DictionaryTest {
 
     @Test
     public void testOneTranslation(){
-        assertThat(dict.addTranslation("contre","against"), equalTo("against"));
+        assertThat(dict.getTranslation("against"), equalTo("against"));
     }
 }
