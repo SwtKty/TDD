@@ -7,6 +7,9 @@ public class Dictionary {
     private String name;
     private String mot1, mot2;
 
+    Map<String, String> translations = new HashMap<>();
+
+
     public Dictionary(String name) {
         this.name=name;
     }
@@ -16,7 +19,8 @@ public class Dictionary {
     }
 
     public String isEmpty(){
-        if(name == null){
+
+        if(translations.size() == 0){
             return "Empty";
         }
         else {
@@ -24,7 +28,6 @@ public class Dictionary {
         }
     }
 
-    Map<String, String> translations = new HashMap<>();
 
     public String addTranslation (String mot1, String mot2){
         this.mot2=mot2;

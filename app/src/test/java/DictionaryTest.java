@@ -21,7 +21,7 @@ public class DictionaryTest {
     @Test
     public void testDictionaryisEmpty() {
 
-        assertThat(dict.isEmpty(), equalTo("notEmpty"));
+        assertThat(dict.isEmpty(), equalTo("Empty"));
     }
 
     @Test
