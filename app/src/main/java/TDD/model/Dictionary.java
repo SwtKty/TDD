@@ -27,6 +27,6 @@ public class Dictionary {
     }
 
     public String getTranslation (String mot1){
-        return mot1;
+        return mot2;
     }
 }
