@@ -10,4 +10,13 @@ public class Dictionary {
     public String getName(){
         return name;
     }
+
+    public String isEmpty(){
+        if(name == null){
+            return "Empty";
+        }
+        else {
+            return "notEmpty";
+        }
+    }
 }
