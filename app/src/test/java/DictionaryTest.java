@@ -23,4 +23,10 @@ public class DictionaryTest {
 
         assertThat(dict.isEmpty(), equalTo("notEmpty"));
     }
+
+    @Test
+    public void testOneTranslation(){
+        dict.addTranslation("contre", "against");
+        assertThat(dict.getTranslation("contre"), equalTo("against"));
+    }
 }
