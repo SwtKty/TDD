@@ -1,5 +1,8 @@
 package TDD.model;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Dictionary {
     private String name;
     private String mot1, mot2;
@@ -29,4 +32,6 @@ public class Dictionary {
     public String getTranslation (String mot1){
         return mot2;
     }
+
+    Map<String, String> translations = new HashMap<>();
 }
