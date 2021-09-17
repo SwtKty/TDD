@@ -44,7 +44,7 @@ public class DictionaryTest {
     @Test
     public void testOneTranslation(){
         dict.addTranslation("contre","against","versus");
-        assertThat(dict.getTranslation("contre"),containsInAnyOrder("against","versus"));
+        assertThat(dict.getMultipleTranslation("contre"),containsInAnyOrder("against","versus"));
     }
 
 

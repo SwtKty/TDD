@@ -16,38 +16,38 @@ public class Dictionary {
 
 
     public Dictionary(String name) {
-        this.name=name;
+        this.name = name;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
-    public String isEmpty(){
+    public String isEmpty() {
 
-        if(translations.size() == 0){
+        if (translations.size() == 0) {
             return "Empty";
-        }
-        else {
+        } else {
             return "notEmpty";
         }
     }
 
 
-    public List<String> addTranslation (String mot1, String mot2, String mot3){
-        this.mot2=mot2;
-        this.mot1=mot1;
-        this.mot3=mot3;
+    public List<String> addTranslation(String mot1, String mot2, String mot3) {
+        this.mot2 = mot2;
+        this.mot1 = mot1;
+        this.mot3 = mot3;
         values.add(mot2);
         values.add(mot3);
-        translations.put(mot1,values);
+        multiTranslations.put(mot1, values);
 
-        return translations.get(mot1);
+        return multiTranslations.get(mot1);
     }
 
 
-    public List<String> getTranslation (String mot1){
-        return translations.get(mot1);
-    }
 
+    public List<String> getMultipleTranslation(String mot1) {
+        return multiTranslations.get(mot1);
+    }
 }
+
