@@ -47,5 +47,8 @@ public class DictionaryTest {
         assertThat(dict.getMultipleTranslation("contre"),containsInAnyOrder("against","versus"));
     }
 
+    public void testInversTranslation(){
 
+        assertThat(dict.getInverseTranslation("against"), equalTo("contre"));
+    }
 }
