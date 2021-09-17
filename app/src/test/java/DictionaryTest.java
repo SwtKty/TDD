@@ -1,14 +1,17 @@
 import TDD.model.Dictionary;
+import org.hamcrest.Matcher;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
 
 import java.util.Enumeration;
 
 import static net.bytebuddy.matcher.ElementMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.*;
 
 public class DictionaryTest {
 
@@ -24,6 +27,8 @@ public class DictionaryTest {
         dict = null;
     }
 
+
+
     @Test
     public void testDictionaryName() {
 
@@ -38,7 +43,9 @@ public class DictionaryTest {
 
     @Test
     public void testOneTranslation(){
-        dict.addTranslation("rouge","red");
-        assertThat(dict.getTranslation("rouge"), equalTo("red"));
+        dict.addTranslation("contre","against","versus");
+        assertThat(dict.getTranslation("contre"),containsInAnyOrder("against","versus"));
     }
+
+
 }
