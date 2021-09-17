@@ -20,6 +20,7 @@ public class DictionaryTest {
     @Before
     public void initialize(){
         dict = new Dictionary("Example");
+        dict.addTranslation("contre","against","versus");
     }
 
     @After
@@ -43,10 +44,11 @@ public class DictionaryTest {
 
     @Test
     public void testOneTranslation(){
-        dict.addTranslation("contre","against","versus");
+
         assertThat(dict.getMultipleTranslation("contre"),containsInAnyOrder("against","versus"));
     }
 
+    @Test
     public void testInversTranslation(){
 
         assertThat(dict.getInverseTranslation("against"), equalTo("contre"));

@@ -49,5 +49,15 @@ public class Dictionary {
     public List<String> getMultipleTranslation(String mot1) {
         return multiTranslations.get(mot1);
     }
+
+    public String getInverseTranslation(String mot2) {
+        String ret = null;
+        for (String key : this.multiTranslations.keySet())
+            for (String i : this.getMultipleTranslation(key))
+                if (i.equals(mot2)) {
+                    ret = key;
+                }
+            return ret;
+    }
 }
 
